@@ -3,6 +3,8 @@ import pyautogui
 import pydirectinput
 import time
 
+pydirectinput.PAUSE = 0.01
+
 def focus():
     w = pyautogui.getWindowsWithTitle("Roblox")[0]
     w.activate()
@@ -14,11 +16,11 @@ def brute(wordlist):
     with open(wordlist) as file:
         for word in file:
             pydirectinput.press("/")
-            time.sleep(0.1)
+            time.sleep(0.03)
 
             #print(f"Sending {word}")
-            pyautogui.write("/e ", interval=0) #Send /e first to prevent sending accidental /clear or /emote
-            pyautogui.typewrite(word)
+            pyautogui.write("/e ", interval = 0) #Send /e first to prevent sending accidental /clear or /emote
+            pyautogui.typewrite(word, interval = 0)
             pydirectinput.press("enter")
 
     print("Bruteforce completed")
