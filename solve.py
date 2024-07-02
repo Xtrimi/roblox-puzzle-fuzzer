@@ -14,12 +14,14 @@ def brute(wordlist):
     focus()
 
     with open(wordlist) as file:
-        for word in file:
+        lines = [line.rstrip() for line in file]
+
+        for word in lines:
             pydirectinput.press("/")
             time.sleep(0.03)
 
             #print(f"Sending {word}")
-            pyautogui.write("/e ", interval = 0) #Send /e first to prevent sending accidental /clear or /emote
+            pyautogui.typewrite("/e ", interval = 0) #Send /e first to prevent sending accidental /clear or /emote
             pyautogui.typewrite(word, interval = 0)
             pydirectinput.press("enter")
 
