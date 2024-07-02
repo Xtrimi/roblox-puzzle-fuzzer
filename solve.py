@@ -8,7 +8,7 @@ pydirectinput.PAUSE = 0.01
 def focus():
     w = pyautogui.getWindowsWithTitle("Roblox")[0]
     w.activate()
-    time.sleep(1)
+    time.sleep(2)
 
 def brute(wordlist):
     focus()
