@@ -1,5 +1,6 @@
 # roblox-puzzle-fuzzer
 Bruteforces all words in /e command given a wordlist, in a Roblox game.
+To terminate the process midway, move your cursor to your screen's top left corner.
 
 ### Usage
 ```bash
